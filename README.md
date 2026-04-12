@@ -18,7 +18,7 @@ LinkedIn: [https://www.linkedin.com](https://www.linkedin.com/in/henrique-bering
 
 Graduação em Ciência de Dados & Machine Learning (em andamento)
 
-------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 
 ### Habilidades Técnicas
 
