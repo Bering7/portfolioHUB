@@ -1,4 +1,4 @@
-# portifolioHUB
+# portfolioHUB
 
 # Henrique Moura Bering
 
