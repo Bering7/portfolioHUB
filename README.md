@@ -81,3 +81,16 @@ Projetos de exploração, limpeza e visualização de dados, com geração de in
 
 * Experiência prática com projetos acadêmicos em Ciência de Dados
 * Interesse em oportunidades internacionais (trabalho remoto e em inglês)
+
+---
+
+## 📂 Estrutura do Repositório (PortfolioHUB)
+
+Para além do meu perfil profissional, este repositório centraliza os meus desenvolvimentos e está organizado nas seguintes secções:
+
+* **`/projetos-academicos`**: Trabalhos, exercícios e projetos desenvolvidos em ambientes educacionais (como o Curso em Vídeo de Python, por exemplo).
+* **`/projetos-pessoais`**: Soluções criadas por iniciativa própria, onde testo novas tecnologias e resolvo problemas reais.
+* **`/documentacao`**: Arquivos de suporte, anotações de estudo e outras referências importantes.
+
+### 🌐 Projeto Inicial Web
+Como parte da estruturação deste portfólio, foi desenvolvida uma página web inicial (HTML/CSS) que pode ser acedida através do **GitHub Pages** deste repositório.
