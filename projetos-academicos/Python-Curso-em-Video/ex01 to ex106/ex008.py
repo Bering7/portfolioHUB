@@ -1,0 +1,8 @@
+m = float(input('Uma distância em metros: '))
+print(f'A medida {m}m equivale a: ')
+print(f'{m/1000}Km')
+print(f'{m/100}Hm')
+print(f'{m/10}Dam')
+print(f'{m*10}Dm')
+print(f'{m*100}Cm')
+print(f'{m*1000}Mm')

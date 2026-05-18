@@ -1,0 +1,12 @@
+a1 = int(input('Digite o primeiro termo da P.A: '))
+r = int(input('Razão: '))
+contador = 1
+totalt = 0
+termos = 10
+while termos != 0:
+    totalt += termos #o total passa a valer 10 para que o programa comece mostrando os 10 primeiros termos, mas será mudado assim que o usuário decidir quantos termos a mais ele quer
+    while contador <= totalt:
+        print('{}'.format(a1), end=' ')
+        a1 += r
+        contador += 1
+    termos = int(input('\nVocê quer mostrar mais termos? Quantos? '))
