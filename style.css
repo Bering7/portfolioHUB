@@ -137,3 +137,55 @@ header {
     font-size: 1.1rem;
     color: #bdc3c7;
 }
+
+/* ==================== SEÇÃO DE CONTATO ==================== */
+#contato {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background-color: #f8fafc; /* Um fundo cinza bem sutil para destacar a seção */
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+#contato p {
+    color: #555555;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Alinha os botões de contato lado a lado */
+.contato-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Faz os botões quebrarem de linha em telas pequenas */
+}
+
+/* Estilo individual de cada botão de contato */
+.contato-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease; /* Cria o efeito suave na transição do hover */
+}
+
+/* Efeito ao passar o mouse por cima (Hover) */
+.contato-card:hover {
+    transform: translateY(-3px); /* Faz o botão subir levemente */
+    border-color: #3498db; /* Altera a borda para o azul do seu tema */
+    color: #3498db; /* Altera o texto para azul */
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.15); /* Dá uma sombra azulada suave */
+}
+
+.contato-icone {
+    font-size: 1.3rem;
+}
