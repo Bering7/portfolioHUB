@@ -92,10 +92,10 @@
             <p>Estou sempre aberto a novas oportunidades, parcerias ou apenas para trocar uma ideia sobre Ciência de Dados e Machine Learning. Vamos conversar?</p>
     
             <div class="contato-grid">
-                <a href="mailto:riquemoura.bering@gmail.com" class="contato-card">
+                <button onclick="copiarEmail()" class="contato-card" id="btn-email">
                     <span class="contato-icone">📧</span>
-                    <span class="contato-texto">E-mail</span>
-                </a>
+                    <span class="contato-texto" id="texto-email">E-mail</span>
+                </button>
         
                 <a href="https://www.linkedin.com/in/henrique-bering-376244359/" target="_blank" class="contato-card">
                     <span class="contato-icone">💼</span>
@@ -119,6 +119,9 @@
     <footer>
         <p>&copy; 2026 Henrique Moura Bering. Criado para o repositório PortfolioHUB.</p>
     </footer>
+
+    <script src="script.js"></script>
+</body>
 
 </body>
 </html>

@@ -176,6 +176,8 @@ header {
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease; /* Cria o efeito suave na transição do hover */
+    cursor: pointer;
+    font-family: inherit;
 }
 
 /* Efeito ao passar o mouse por cima (Hover) */
