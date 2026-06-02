@@ -92,3 +92,48 @@ footer {
     color: #7f8c8d;
     margin-top: 50px;
 }
+
+/* 1. Modifica o cabeçalho existente para usar Flexbox */
+header {
+    background-color: #1a252c; /* Mantenha sua cor de fundo original */
+    color: #ffffff;
+    padding: 2.5rem 1rem; /* Dá um espacinho para respirar */
+    display: flex; /* Ativa o modo de colocar elementos lado a lado */
+    justify-content: center; /* Centraliza todo o conjunto no meio da tela */
+    align-items: center; /* Centraliza a foto e o texto verticalmente */
+    border-bottom: 5px solid #3498db; /* Mantenha sua borda original */
+}
+
+/* 2. Controla o espacinho entre a foto e o texto */
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Este é o espaço entre a foto e o texto. Aumente ou diminua se quiser */
+}
+
+/* 3. Estiliza a foto (moderada, horizontal e bonitinha) */
+.foto-perfil {
+    width: 180px; /* Largura definida para não ficar gigante, mas visível */
+    height: auto; /* Mantém a proporção horizontal original da foto */
+    border-radius: 8px; /* Dá uma leve arredondada nas bordas para ficar moderno */
+    border: 3px solid white; /* Opcional: Adiciona uma borda branca fina */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Opcional: Adiciona uma sombra suave */
+    object-fit: cover; /* Garante que a foto preencha o espaço sem distorcer */
+}
+
+/* 4. Garante que o texto fique alinhado à esquerda agora, já que a foto está à esquerda */
+.texto-header-wrapper {
+    text-align: left;
+}
+
+.texto-header-wrapper h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.texto-header-wrapper p {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1.1rem;
+    color: #bdc3c7;
+}
