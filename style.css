@@ -255,7 +255,7 @@ header {
 }
 
 /* Altera a cor do status se estiver concluído */
-.curso-card:nth-child(2) .curso-status {
+.curso-card:nth-child(3) .curso-status {
     background-color: #e6f4ea;
     color: #137333;
 }
