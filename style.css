@@ -189,3 +189,86 @@ header {
 .contato-icone {
     font-size: 1.3rem;
 }
+
+/* ==================== SEÇÃO TRILHA DE ESTUDOS ==================== */
+#trilha {
+    margin-top: 50px;
+}
+
+#trilha p {
+    color: #555555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Container que organiza os cartões de cursos */
+.trilha-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo individual de cada curso */
+.curso-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #3498db; /* Barrinha azul na esquerda para dar destaque */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito sutil ao passar o mouse */
+.curso-card:hover {
+    transform: translateX(5px); /* Desloca o card de leve para a direita */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Organiza o nome da instituição e o status (Concluído/Em andamento) */
+.curso-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.curso-instituicao {
+    color: #7f8c8d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tag de status (Concluído / Em andamento) */
+.curso-status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #e8f4fd;
+    color: #3498db;
+}
+
+/* Altera a cor do status se estiver concluído */
+.curso-card:nth-child(2) .curso-status {
+    background-color: #e6f4ea;
+    color: #137333;
+}
+
+.curso-card h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.curso-card p {
+    margin: 0;
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
