@@ -1,5 +1,5 @@
 # portfolioHUB
-acesse: [https://github.io](https://bering7.github.io/portfolioHUB/)
+acesse o [Site do Portfólio](https://bering7.github.io/portfolioHUB/)
 
 # Henrique Moura Bering
 
