@@ -107,6 +107,17 @@ body.no-scroll { overflow: hidden; }
   color: #fff;
 }
 
+.btn--download {
+  border-color: var(--navy);
+  color: var(--navy);
+  gap: 10px;
+}
+
+.btn--download:hover {
+  background-color: #003366;
+  color: #ffffff;
+}
+
 /* ==========================================================
    HEADER / NAV
    ========================================================== */
