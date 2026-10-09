@@ -1,4 +1,4 @@
-# 💼 Portfólio Profissional — Henrique Bering
+# Portfólio Profissional — Henrique Bering
 
 > Portfólio web moderno e responsivo desenvolvido com HTML5, CSS3 e JavaScript puro, apresentando projetos, competências e trajetória profissional na área de **Ciência de Dados & Machine Learning**.
 
@@ -16,7 +16,7 @@
 
 ---
 
-## 🌟 Visão Geral
+## Visão Geral
 
 Este repositório contém o código-fonte do portfólio pessoal e profissional de **Henrique Bering**. Desenvolvido com foco em estética corporativa, elegância, performance e total responsividade (mobile, tablet e desktop), servindo como hub para apresentação de projetos práticos e contato profissional.
 
@@ -52,7 +52,7 @@ Este repositório contém o código-fonte do portfólio pessoal e profissional d
 
 ---
 
-## 🚀 Projetos em Destaque
+## Projetos em Destaque
 
 | # | Projeto | Descrição | Tecnologias |
 |---|---|---|---|
