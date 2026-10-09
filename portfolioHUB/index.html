@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Henrique Bering — Ciência de Dados & Machine Learning. Portfólio, projetos e contato.">
+  <title>Henrique Bering | Ciência de Dados & Machine Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Início">HB<span>.</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Disponível para estágio</p>
+        <h1 class="hero__title">Henrique Bering</h1>
+        <h2 class="hero__subtitle">Ciência de Dados &amp; Machine Learning</h2>
+        <p class="hero__text">
+          Python, SQL e análise de dados aplicados a problemas reais: automação de processos,
+          análise exploratória e aplicações interativas.
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+          <a href="#contato" class="btn btn--outline">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="section__header">
+          <span class="section__label">01</span>
+          <h2 class="section__title">Sobre</h2>
+        </div>
+        <div class="about__grid">
+          <p class="about__text">
+            Estudante do 2º semestre no UniCEUB. Base sólida em Python e análise de dados.
+            Busco oportunidade de estágio para aplicar habilidades técnicas na geração de
+            insights orientados a dados e no desenvolvimento de aplicações.
+          </p>
+          <ul class="about__facts">
+            <li>
+              <span class="about__fact-label">Formação</span>
+              <span class="about__fact-value">Ciência de Dados e Machine Learning — UniCEUB</span>
+            </li>
+            <li>
+              <span class="about__fact-label">Período</span>
+              <span class="about__fact-value">2º semestre</span>
+            </li>
+            <li>
+              <span class="about__fact-label">Modalidade</span>
+              <span class="about__fact-value">Presencial, híbrido ou remoto</span>
+            </li>
+            <li>
+              <span class="about__fact-label">Localização</span>
+              <span class="about__fact-value">Brasília — DF</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">02</span>
+          <h2 class="section__title">Skills</h2>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skills__group">
+            <h3 class="skills__group-title">Linguagens &amp; Dados</h3>
+            <ul class="badges">
+              <li class="badge">Python</li>
+              <li class="badge">SQL</li>
+              <li class="badge">Pandas</li>
+              <li class="badge">NumPy</li>
+              <li class="badge">POO</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Plataformas &amp; Visualização</h3>
+            <ul class="badges">
+              <li class="badge">Databricks</li>
+              <li class="badge">Streamlit</li>
+              <li class="badge">Power BI</li>
+              <li class="badge">Excel</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Ferramentas</h3>
+            <ul class="badges">
+              <li class="badge">Git</li>
+              <li class="badge">GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">03</span>
+          <h2 class="section__title">Projetos</h2>
+        </div>
+
+        <div class="projects__grid">
+          <article class="card">
+            <span class="card__index">01</span>
+            <h3 class="card__title">Integração e Automação de Processos</h3>
+            <p class="card__text">
+              Integração de banco de dados Supabase/PostgreSQL via API REST e disparo
+              automatizado de mensagens pela Z-API, reduzindo etapas manuais no fluxo de comunicação.
+            </p>
+            <ul class="card__tags">
+              <li>Python</li>
+              <li>PostgreSQL</li>
+              <li>Supabase</li>
+              <li>REST</li>
+              <li>Z-API</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card__index">02</span>
+            <h3 class="card__title">Controle Térmico de Satélites</h3>
+            <p class="card__text">
+              Simulação do comportamento térmico de um satélite em órbita baixa (LEO) e
+              análise dos dados de temperatura gerados ao longo das órbitas.
+            </p>
+            <ul class="card__tags">
+              <li>Python</li>
+              <li>NumPy</li>
+              <li>Simulação</li>
+              <li>Análise de Dados</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card__index">03</span>
+            <h3 class="card__title">Análise de Crédito e Cancelamento (Churn)</h3>
+            <p class="card__text">
+              Análise exploratória de uma base de clientes de crédito para identificar
+              os padrões e variáveis mais associados ao cancelamento.
+            </p>
+            <ul class="card__tags">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>EDA</li>
+              <li>Visualização</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card__index">04</span>
+            <h3 class="card__title">Assistente Virtual com IA</h3>
+            <p class="card__text">
+              Chatbot interativo com interface web construída em Streamlit, integrando
+              um modelo de linguagem para responder às perguntas do usuário.
+            </p>
+            <ul class="card__tags">
+              <li>Python</li>
+              <li>Streamlit</li>
+              <li>IA</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="projects__more">
+          <a href="https://github.com/Bering7" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            Ver todos no GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--dark" id="contato">
+      <div class="container contact">
+        <div class="contact__intro">
+          <h2 class="contact__title">Vamos conversar</h2>
+          <p class="contact__text">
+            Aberto a oportunidades de estágio em dados. Respondo em até 24 horas.
+          </p>
+        </div>
+
+        <ul class="contact__list">
+          <li>
+            <a href="mailto:riquemoura.bering@gmail.com" class="contact__item">
+              <span class="contact__label">E-mail</span>
+              <span class="contact__value">riquemoura.bering@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5561999035238" target="_blank" rel="noopener noreferrer" class="contact__item">
+              <span class="contact__label">Telefone / WhatsApp</span>
+              <span class="contact__value">(61) 99903-5238</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Bering7" target="_blank" rel="noopener noreferrer" class="contact__item">
+              <span class="contact__label">GitHub</span>
+              <span class="contact__value">github.com/Bering7</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/henrique-bering-376244359" target="_blank" rel="noopener noreferrer" class="contact__item">
+              <span class="contact__label">LinkedIn</span>
+              <span class="contact__value">linkedin.com/in/henrique-bering-376244359</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Henrique Bering</p>
+      <a href="#inicio" class="footer__top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
