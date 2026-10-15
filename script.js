@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Animação de entrada discreta ---------- */
   const revealItems = document.querySelectorAll(
-    ".section__header, .about__grid, .skills__group, .card, .contact__intro, .contact__list"
+    ".section__header, .about__grid, .skills__group, .card"
   );
 
   if ("IntersectionObserver" in window) {

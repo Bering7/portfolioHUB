@@ -285,11 +285,57 @@ body.no-scroll { overflow: hidden; }
   color: var(--text-muted);
 }
 
+.hero__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1a56db;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.hero__link span {
+  text-decoration: underline;
+  text-decoration-color: #1a56db;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  transition: text-decoration-color var(--transition);
+}
+
+.hero__link .link-arrow {
+  color: #1a56db;
+  transition: transform var(--transition), color var(--transition);
+  flex-shrink: 0;
+}
+
+.hero__link:hover {
+  color: var(--navy);
+}
+
+.hero__link:hover span {
+  text-decoration-color: var(--navy);
+}
+
+.hero__link:hover .link-arrow {
+  color: var(--navy);
+  transform: translate(2px, -2px);
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 /* ==========================================================
@@ -532,74 +578,6 @@ body.no-scroll { overflow: hidden; }
   margin-top: 3.5rem;
 }
 
-/* ==========================================================
-   CONTATO
-   ========================================================== */
-.section--dark {
-  background: var(--navy);
-  color: #fff;
-}
-
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.contact__title {
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-}
-
-.contact__text {
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 1.05rem;
-  max-width: 380px;
-}
-
-.contact__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.contact__item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  height: 100%;
-  padding: 1.25rem 1.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.04);
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
-}
-
-.contact__item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.35);
-  transform: translateY(-2px);
-}
-
-.contact__item:focus-visible { outline-color: #fff; }
-
-.contact__label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact__value {
-  font-size: 0.95rem;
-  font-weight: 500;
-  word-break: break-word;
-}
 
 /* ==========================================================
    FOOTER
@@ -645,8 +623,7 @@ body.no-scroll { overflow: hidden; }
    RESPONSIVO
    ========================================================== */
 @media (max-width: 960px) {
-  .about__grid,
-  .contact { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about__grid { grid-template-columns: 1fr; gap: 2.5rem; }
 
   .skills__grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -699,8 +676,7 @@ body.no-scroll { overflow: hidden; }
   .hero { min-height: auto; padding: calc(var(--header-h) + 56px) 0 72px; }
 
   .projects__grid,
-  .skills__grid,
-  .contact__list { grid-template-columns: 1fr; }
+  .skills__grid { grid-template-columns: 1fr; }
 
   .card { padding: 1.75rem 1.5rem; }
 }
@@ -708,6 +684,7 @@ body.no-scroll { overflow: hidden; }
 @media (max-width: 480px) {
   .container { padding: 0 20px; }
 
+  .hero__contacts { gap: 0.85rem 1.25rem; }
   .hero__actions { flex-direction: column; }
   .hero__actions .btn { width: 100%; }
 
