@@ -240,6 +240,51 @@ body.no-scroll { overflow: hidden; }
 .nav__link:hover::after,
 .nav__link.is-active::after { width: 100%; }
 
+/* ==========================================================
+   ALTERNADOR DE IDIOMA (Pill PT / EN)
+   ========================================================== */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1.1;
+  transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.lang-btn:hover:not(.is-active) {
+  color: var(--navy);
+}
+
+.lang-btn.is-active {
+  background: var(--navy);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 44, 76, 0.2);
+}
+
+[data-theme="dark"] .lang-btn.is-active {
+  background: var(--btn-primary-bg);
+  color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
 /* Botão Alternador de Tema */
 .theme-toggle {
   display: inline-flex;

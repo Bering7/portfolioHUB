@@ -15,6 +15,9 @@
       const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
       const theme = savedTheme || (systemDark ? "dark" : "light");
       document.documentElement.setAttribute("data-theme", theme);
+
+      const savedLang = localStorage.getItem("lang") || "pt";
+      document.documentElement.lang = savedLang === "pt" ? "pt-BR" : "en";
     })();
   </script>
 </head>
@@ -27,11 +30,17 @@
       <div class="header__right">
         <nav class="nav" id="navMenu" aria-label="Navegação principal">
           <ul class="nav__list">
-            <li><a href="#sobre" class="nav__link">Sobre</a></li>
-            <li><a href="#skills" class="nav__link">Skills</a></li>
-            <li><a href="#projetos" class="nav__link">Projetos</a></li>
+            <li><a href="#sobre" class="nav__link" data-i18n="nav_about">Sobre</a></li>
+            <li><a href="#skills" class="nav__link" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#projetos" class="nav__link" data-i18n="nav_projects">Projetos</a></li>
           </ul>
         </nav>
+
+        <!-- Toggle de Idioma (Pill PT / EN) -->
+        <div class="lang-toggle" id="langToggle" role="group" aria-label="Alternar idioma / Switch language">
+          <button type="button" class="lang-btn is-active" id="langPt" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" class="lang-btn" id="langEn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
 
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar modo escuro e claro" title="Alternar modo escuro e claro">
           <!-- Sol: visível no modo claro -->
@@ -63,37 +72,37 @@
     <!-- HERO -->
     <section class="hero" id="inicio">
       <div class="container hero__inner">
-        <p class="hero__eyebrow">Disponível para estágio</p>
+        <p class="hero__eyebrow" data-i18n="hero_eyebrow">Disponível para estágio</p>
         <h1 class="hero__title">Henrique Moura Bering</h1>
-        <h2 class="hero__subtitle">Ciência de Dados &amp; Machine Learning</h2>
-        <p class="hero__text">
+        <h2 class="hero__subtitle" data-i18n="hero_subtitle">Ciência de Dados &amp; Machine Learning</h2>
+        <p class="hero__text" data-i18n="hero_text">
           Python, SQL, Power BI e análise de dados aplicados a problemas reais: automação de processos,
           análise exploratória, aplicações interativas e criação de dashboards.
         </p>
         <div class="hero__contacts" id="contato">
           <a href="mailto:riquemoura.bering@gmail.com" class="hero__link" title="riquemoura.bering@gmail.com">
-            <span>E-mail</span>
+            <span data-i18n="contact_email">E-mail</span>
             <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </a>
           <a href="https://wa.me/5561999035238" target="_blank" rel="noopener noreferrer" class="hero__link" title="(61) 99903-5238">
-            <span>WhatsApp</span>
+            <span data-i18n="contact_whatsapp">WhatsApp</span>
             <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </a>
           <a href="https://github.com/Bering7" target="_blank" rel="noopener noreferrer" class="hero__link" title="github.com/Bering7">
-            <span>GitHub</span>
+            <span data-i18n="contact_github">GitHub</span>
             <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </a>
           <a href="https://www.linkedin.com/in/henrique-moura-bering-376244359" target="_blank" rel="noopener noreferrer" class="hero__link" title="linkedin.com/in/henrique-moura-bering-376244359">
-            <span>LinkedIn</span>
+            <span data-i18n="contact_linkedin">LinkedIn</span>
             <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>
@@ -108,7 +117,7 @@
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            Currículo - PT
+            <span data-i18n="resume_pt">Currículo - PT</span>
           </a>
 
           <a href="curriculo/resume.pdf" download="Resume_Henrique_Moura_Bering" class="btn btn--download"><!-- Ícone de Download em SVG -->
@@ -117,7 +126,7 @@
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            Currículo - EN
+            <span data-i18n="resume_en">Currículo - EN</span>
           </a>
         </div>
       </div>
@@ -128,30 +137,30 @@
       <div class="container about">
         <div class="section__header">
           <span class="section__label">01</span>
-          <h2 class="section__title">Sobre</h2>
+          <h2 class="section__title" data-i18n="about_title">Sobre</h2>
         </div>
         <div class="about__grid">
-          <p class="about__text">
+          <p class="about__text" data-i18n="about_text">
             Estudante do 2º semestre no UniCEUB. Base sólida em Python e análise de dados.
             Busco oportunidade de estágio para aplicar habilidades técnicas na geração de
             insights orientados a dados e no desenvolvimento de aplicações.
           </p>
           <ul class="about__facts">
             <li>
-              <span class="about__fact-label">Formação</span>
-              <span class="about__fact-value">Ciência de Dados e Machine Learning — UniCEUB</span>
+              <span class="about__fact-label" data-i18n="fact_education_label">Formação</span>
+              <span class="about__fact-value" data-i18n="fact_education_val">Ciência de Dados e Machine Learning — UniCEUB</span>
             </li>
             <li>
-              <span class="about__fact-label">Período</span>
-              <span class="about__fact-value">2º semestre</span>
+              <span class="about__fact-label" data-i18n="fact_term_label">Período</span>
+              <span class="about__fact-value" data-i18n="fact_term_val">2º semestre</span>
             </li>
             <li>
-              <span class="about__fact-label">Modalidade</span>
-              <span class="about__fact-value">Presencial, híbrido ou remoto</span>
+              <span class="about__fact-label" data-i18n="fact_model_label">Modalidade</span>
+              <span class="about__fact-value" data-i18n="fact_model_val">Presencial, híbrido ou remoto</span>
             </li>
             <li>
-              <span class="about__fact-label">Localização</span>
-              <span class="about__fact-value">Brasília — DF</span>
+              <span class="about__fact-label" data-i18n="fact_location_label">Localização</span>
+              <span class="about__fact-value" data-i18n="fact_location_val">Brasília — DF</span>
             </li>
           </ul>
         </div>
@@ -163,22 +172,22 @@
       <div class="container">
         <div class="section__header">
           <span class="section__label">02</span>
-          <h2 class="section__title">Skills</h2>
+          <h2 class="section__title" data-i18n="skills_title">Skills</h2>
         </div>
 
         <div class="skills__grid">
           <div class="skills__group">
-            <h3 class="skills__group-title">Linguagens &amp; Dados</h3>
+            <h3 class="skills__group-title" data-i18n="skills_group_languages">Linguagens &amp; Dados</h3>
             <ul class="badges">
               <li class="badge">Python</li>
               <li class="badge">SQL</li>
               <li class="badge">Pandas</li>
               <li class="badge">NumPy</li>
-              <li class="badge">POO</li>
+              <li class="badge" data-i18n="badge_oop">POO</li>
             </ul>
           </div>
           <div class="skills__group">
-            <h3 class="skills__group-title">Plataformas &amp; Visualização</h3>
+            <h3 class="skills__group-title" data-i18n="skills_group_platforms">Plataformas &amp; Visualização</h3>
             <ul class="badges">
               <li class="badge">Databricks</li>
               <li class="badge">Streamlit</li>
@@ -187,7 +196,7 @@
             </ul>
           </div>
           <div class="skills__group">
-            <h3 class="skills__group-title">Ferramentas</h3>
+            <h3 class="skills__group-title" data-i18n="skills_group_tools">Ferramentas</h3>
             <ul class="badges">
               <li class="badge">Git</li>
               <li class="badge">GitHub</li>
@@ -202,7 +211,7 @@
       <div class="container">
         <div class="section__header">
           <span class="section__label">03</span>
-          <h2 class="section__title">Projetos</h2>
+          <h2 class="section__title" data-i18n="projects_title">Projetos</h2>
         </div>
 
         <div class="projects__grid">
@@ -210,15 +219,15 @@
                PROJETO 01: Integração e Automação de Processos
                >>> INSIRA O LINK DO REPOSITÓRIO GITHUB NO href ABAIXO <<<
                ========================================================= -->
-          <a href="https://github.com/Bering7/desafio-b2bflow" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Integração e Automação de Processos no GitHub">
+          <a href="https://github.com/Bering7/desafio-b2bflow" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Integração e Automação de Processos no GitHub" data-i18n-aria="project_1_aria">
             <div class="card__header">
               <span class="card__index">01</span>
               <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
             </div>
-            <h3 class="card__title">Integração e Automação de Processos</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="project_1_title">Integração e Automação de Processos</h3>
+            <p class="card__text" data-i18n="project_1_text">
               Integração de banco de dados Supabase/PostgreSQL via API REST e disparo
               automatizado de mensagens pela Z-API, reduzindo etapas manuais no fluxo de comunicação.
             </p>
@@ -234,38 +243,38 @@
           <!-- =========================================================
                PROJETO 02: Controle Térmico de Satélites
                ========================================================= -->
-          <a href="https://github.com/Bering7/Controle-Termico-de-Satelite" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Controle Térmico de Satélites no GitHub">
+          <a href="https://github.com/Bering7/Controle-Termico-de-Satelite" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Controle Térmico de Satélites no GitHub" data-i18n-aria="project_2_aria">
             <div class="card__header">
               <span class="card__index">02</span>
               <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
             </div>
-            <h3 class="card__title">Controle Térmico de Satélites</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="project_2_title">Controle Térmico de Satélites</h3>
+            <p class="card__text" data-i18n="project_2_text">
               Simulação do comportamento térmico de um satélite em órbita baixa (LEO) e
               análise dos dados de temperatura gerados ao longo das órbitas.
             </p>
             <ul class="card__tags">
               <li>Python</li>
               <li>NumPy</li>
-              <li>Simulação</li>
-              <li>Análise de Dados</li>
+              <li data-i18n="tag_simulation">Simulação</li>
+              <li data-i18n="tag_data_analysis">Análise de Dados</li>
             </ul>
           </a>
 
           <!-- =========================================================
                PROJETO 03: Análise de Crédito e Cancelamento (Churn)
                ========================================================= -->
-          <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Análise de Crédito e Cancelamento (Churn) no GitHub">
+          <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Análise de Crédito e Cancelamento (Churn) no GitHub" data-i18n-aria="project_3_aria">
             <div class="card__header">
               <span class="card__index">03</span>
               <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
             </div>
-            <h3 class="card__title">Análise de Crédito e Cancelamento (Churn)</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="project_3_title">Análise de Crédito e Cancelamento (Churn)</h3>
+            <p class="card__text" data-i18n="project_3_text">
               Análise exploratória de uma base de clientes de crédito para identificar
               os padrões e variáveis mais associados ao cancelamento.
             </p>
@@ -273,7 +282,7 @@
               <li>Python</li>
               <li>Pandas</li>
               <li>EDA</li>
-              <li>Visualização</li>
+              <li data-i18n="tag_visualization">Visualização</li>
             </ul>
           </a>
 
@@ -281,22 +290,22 @@
                PROJETO 04: Assistente Virtual com IA
                >>> INSIRA O LINK DO REPOSITÓRIO GITHUB NO href ABAIXO <<<
                ========================================================= -->
-          <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Assistente Virtual com IA no GitHub">
+          <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Assistente Virtual com IA no GitHub" data-i18n-aria="project_4_aria">
             <div class="card__header">
               <span class="card__index">04</span>
               <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
             </div>
-            <h3 class="card__title">Assistente Virtual com IA</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="project_4_title">Assistente Virtual com IA</h3>
+            <p class="card__text" data-i18n="project_4_text">
               Chatbot interativo com interface web construída em Streamlit, integrando
               um modelo de linguagem para responder às perguntas do usuário.
             </p>
             <ul class="card__tags">
               <li>Python</li>
               <li>Streamlit</li>
-              <li>IA</li>
+              <li data-i18n="tag_ai">IA</li>
             </ul>
           </a>
         </div>
@@ -309,7 +318,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p>&copy; <span id="year"></span> Henrique Moura Bering</p>
-      <a href="#inicio" class="footer__top">Voltar ao topo ↑</a>
+      <a href="#inicio" class="footer__top" data-i18n="back_to_top">Voltar ao topo ↑</a>
     </div>
   </footer>
 
