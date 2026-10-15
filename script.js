@@ -96,5 +96,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Ano no rodapé ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---------- Alternador de Tema (Modo Escuro / Claro) ---------- */
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  }
 });
 
