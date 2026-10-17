@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Animação de entrada discreta ---------- */
   const revealItems = document.querySelectorAll(
-    ".section__header, .about__grid, .skills__group, .card"
+    ".section__header, .about__grid, .stack__subtitle, .stack-cloud, .card"
   );
 
   if ("IntersectionObserver" in window) {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       page_title: "Henrique Moura Bering",
       meta_description: "Henrique Bering — Ciência de Dados & Machine Learning. Portfólio, projetos e contato.",
       nav_about: "Sobre",
-      nav_skills: "Skills",
+      nav_skills: "Stack",
       nav_projects: "Projetos",
       hero_eyebrow: "Disponível para estágio",
       hero_subtitle: "Ciência de Dados & Machine Learning",
@@ -136,7 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
       fact_model_val: "Presencial, híbrido ou remoto",
       fact_location_label: "Localização",
       fact_location_val: "Brasília — DF",
-      skills_title: "Skills",
+      skills_title: "Stack",
+      stack_subtitle: "Ferramentas que utilizo",
       skills_group_languages: "Linguagens & Dados",
       skills_group_platforms: "Plataformas & Visualização",
       skills_group_tools: "Ferramentas",
@@ -167,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       page_title: "Henrique Moura Bering | Portfolio",
       meta_description: "Henrique Bering — Data Science & Machine Learning. Portfolio, projects, and contact.",
       nav_about: "About",
-      nav_skills: "Skills",
+      nav_skills: "Stack",
       nav_projects: "Projects",
       hero_eyebrow: "Available for internship",
       hero_subtitle: "Data Science & Machine Learning",
@@ -188,7 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
       fact_model_val: "On-site, hybrid, or remote",
       fact_location_label: "Location",
       fact_location_val: "Brasília — DF, Brazil",
-      skills_title: "Skills",
+      skills_title: "Stack",
+      stack_subtitle: "Tools I work with",
       skills_group_languages: "Languages & Data",
       skills_group_platforms: "Platforms & Visualization",
       skills_group_tools: "Tools",

@@ -454,24 +454,33 @@ h3, .skills__group-title, .card__title {
 }
 
 /* ==========================================================
-   9. SKILLS
+   9. STACK
    ========================================================== */
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+.stack__subtitle {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
 }
 
-.skills__group {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition), transform var(--transition);
+.stack-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 850px;
+  margin: 0 auto;
 }
-.skills__group:hover { border-color: var(--border-hover); transform: translateY(-2px); }
-.skills__group-title { margin-bottom: 1.25rem; }
+
+.stack-cloud .badge {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+}
+
 .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
 .badge {
@@ -651,7 +660,7 @@ h3, .skills__group-title, .card__title {
    ========================================================== */
 @media (max-width: 900px) {
   .about__grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .skills__grid { grid-template-columns: 1fr; }
+  
 }
 
 @media (max-width: 768px) {
