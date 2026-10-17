@@ -1,9 +1,5 @@
 # Portfólio Profissional — Henrique Bering
 
-Acesse o [Meu Portfólio](https://portfolio-henriquebering.vercel.app)
-
----
-
 > Portfólio web moderno e responsivo desenvolvido com HTML5, CSS3 e JavaScript puro, apresentando projetos, competências e trajetória profissional na área de **Ciência de Dados & Machine Learning**.
 
 ---
