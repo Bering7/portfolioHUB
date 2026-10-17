@@ -236,14 +236,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dict[key]) el.setAttribute("aria-label", dict[key]);
     });
 
-    const btnPt = document.getElementById("langPt");
-    const btnEn = document.getElementById("langEn");
-    if (btnPt && btnEn) {
-      const isPt = lang === "pt";
-      btnPt.classList.toggle("is-active", isPt);
-      btnPt.setAttribute("aria-pressed", String(isPt));
-      btnEn.classList.toggle("is-active", !isPt);
-      btnEn.setAttribute("aria-pressed", String(!isPt));
+    const langToggleBtn = document.getElementById("langToggle");
+    if (langToggleBtn) {
+      const nextLang = lang === "pt" ? "en" : "pt";
+      langToggleBtn.textContent = nextLang.toUpperCase();
+      const label = lang === "pt" ? "Mudar para inglês / Switch to English" : "Mudar para português / Switch to Portuguese";
+      langToggleBtn.setAttribute("aria-label", label);
+      langToggleBtn.setAttribute("title", label);
     }
 
     const themeBtn = document.getElementById("themeToggle");
@@ -260,13 +259,14 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("lang", lang);
   };
 
-  const langButtons = document.querySelectorAll(".lang-btn");
-  langButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const targetLang = btn.getAttribute("data-lang");
-      if (targetLang) applyLanguage(targetLang);
+  const langToggleBtn = document.getElementById("langToggle");
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener("click", () => {
+      const currentLang = localStorage.getItem("lang") || (document.documentElement.lang.startsWith("pt") ? "pt" : "en");
+      const nextLang = currentLang === "pt" ? "en" : "pt";
+      applyLanguage(nextLang);
     });
-  });
+  }
 
   const initialLang = localStorage.getItem("lang") || "pt";
   applyLanguage(initialLang);
