@@ -158,7 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
       theme_toggle_label: "Alternar modo escuro e claro",
       nav_toggle_open: "Abrir menu",
       nav_toggle_close: "Fechar menu",
-      footer_location: "Brasília, DF"
+      footer_location: "Brasília, DF",
+      github_btn: "VER NO GITHUB"
     },
     en: {
       page_title: "Henrique Moura Bering | Portfolio",
@@ -207,7 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
       theme_toggle_label: "Toggle dark and light mode",
       nav_toggle_open: "Open menu",
       nav_toggle_close: "Close menu",
-      footer_location: "Brasília, Brazil"
+      footer_location: "Brasília, Brazil",
+      github_btn: "VIEW ON GITHUB"
     }
   };
 
