@@ -20,6 +20,11 @@
       document.documentElement.lang = savedLang === "pt" ? "pt-BR" : "en";
     })();
   </script>
+  <meta property="og:title" content="Henrique Moura Bering | Portfólio">
+  <meta property="og:description" content="Ciência de Dados, Machine Learning & Desenvolvimento Python">
+  <meta property="og:image" content="https://portfolio-henriquebering.vercel.app/og-image.jpg">
+  <meta property="og:url" content="https://portfolio-henriquebering.vercel.app/">
+  <meta property="og:type" content="website">
 </head>
 <body>
 
@@ -33,6 +38,7 @@
             <li><a href="#sobre" class="nav__link" data-i18n="nav_about">Sobre</a></li>
             <li><a href="#skills" class="nav__link" data-i18n="nav_skills">Stack</a></li>
             <li><a href="#projetos" class="nav__link" data-i18n="nav_projects">Projetos</a></li>
+            <li><a href="#contato" class="nav__link" data-i18n="nav_contact">Contato</a></li>
           </ul>
         </nav>
 
@@ -76,7 +82,7 @@
           Python, SQL, Power BI e análise de dados aplicados a problemas reais: automação de processos,
           análise exploratória, aplicações interativas e criação de dashboards.
         </p>
-        <div class="hero__contacts" id="contato">
+        <div class="hero__contacts">
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=riquemoura.bering@gmail.com" class="hero__link" title="riquemoura.bering@gmail.com" target="blank">
             <span data-i18n="contact_email">E-mail</span>
             <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -173,20 +179,24 @@
         </div>
         <h3 class="stack__subtitle" data-i18n="stack_subtitle">Ferramentas que utilizo</h3>
         <ul class="badges stack-cloud">
-          <li class="badge">Python</li>
-          <li class="badge">SQL</li>
-          <li class="badge">Pandas</li>
-          <li class="badge">NumPy</li>
-          <li class="badge" data-i18n="badge_oop">POO</li>
-          <li class="badge">Databricks</li>
-          <li class="badge">Streamlit</li>
-          <li class="badge">Power BI</li>
-          <li class="badge">Excel</li>
-          <li class="badge">Git</li>
-          <li class="badge">GitHub</li>
-          <li class="badge">Claude</li>
-          <li class="badge">Gemini Pro</li>
-          <li class="badge">Google Antigravity</li>
+          <li class="badge badge--lang">Python</li>
+          <li class="badge badge--lang">SQL</li>
+          <li class="badge badge--lang">Java</li>
+          <li class="badge badge--lang" data-i18n="badge_oop">POO</li>
+          <li class="badge badge--data">Pandas</li>
+          <li class="badge badge--data">NumPy</li>
+          <li class="badge badge--data">Matplotlib</li>
+          <li class="badge badge--data">Scikit-Learn</li>
+          <li class="badge badge--data">Streamlit</li>
+          <li class="badge badge--data">Power BI</li>
+          <li class="badge badge--data">Excel</li>
+          <li class="badge badge--tool">Git</li>
+          <li class="badge badge--tool">GitHub</li>
+          <li class="badge badge--tool">MySQL Workbench</li>
+          <li class="badge badge--tool">brModelo</li>
+          <li class="badge badge--ai">Claude</li>
+          <li class="badge badge--ai">Gemini Pro</li>
+          <li class="badge badge--ai">Google Antigravity</li>
         </ul>
       </div>
     </section>
@@ -199,110 +209,119 @@
           <h2 class="section__title" data-i18n="projects_title">Projetos</h2>
         </div>
 
-        <div class="projects__grid">
-          <!-- =========================================================
-               PROJETO 01: Integração e Automação de Processos
-               >>> INSIRA O LINK DO REPOSITÓRIO GITHUB NO href ABAIXO <<<
-               ========================================================= -->
-          <a href="https://github.com/Bering7/desafio-b2bflow" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Integração e Automação de Processos no GitHub" data-i18n-aria="project_1_aria">
-            <div class="card__header">
-              <span class="card__index">01</span>
-              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
+        <div class="portfolio-list">
+          <!-- Projeto sem imagem -->
+          <article class="portfolio-row">
+            <div class="portfolio-left">
+              <h3 class="portfolio-title" data-i18n="project_1_title">Integração e Automação de Processos</h3>
             </div>
-            <h3 class="card__title" data-i18n="project_1_title">Integração e Automação de Processos</h3>
-            <p class="card__text" data-i18n="project_1_text">
-              Integração de banco de dados Supabase/PostgreSQL via API REST e disparo
-              automatizado de mensagens pela Z-API, reduzindo etapas manuais no fluxo de comunicação.
-            </p>
-            <ul class="card__tags">
-              <li>Python</li>
-              <li>PostgreSQL</li>
-              <li>Supabase</li>
-              <li>REST</li>
-              <li>Z-API</li>
-            </ul>
-          </a>
+            <div class="portfolio-center">
+              <p class="portfolio-desc" data-i18n="project_1_text">Integração de banco de dados Supabase/PostgreSQL via API REST e disparo automatizado de mensagens pela Z-API.</p>
+              <div class="portfolio-tags">
+                <span>Python</span><span>PostgreSQL</span><span>Supabase</span><span>REST</span><span>Z-API</span>
+              </div>
+            </div>
+            <div class="portfolio-right">
+              <a href="https://github.com/Bering7/desafio-b2bflow" target="_blank" class="portfolio-btn">GITHUB</a>
+            </div>
+          </article>
 
-          <!-- =========================================================
-               PROJETO 02: Controle Térmico de Satélites
-               ========================================================= -->
-          <a href="https://github.com/Bering7/Controle-Termico-de-Satelite" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Controle Térmico de Satélites no GitHub" data-i18n-aria="project_2_aria">
-            <div class="card__header">
-              <span class="card__index">02</span>
-              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
+          <!-- Projeto SEM imagem -->
+          <article class="portfolio-row">
+            <div class="portfolio-left">
+              <h3 class="portfolio-title" data-i18n="project_2_title">Controle Térmico de Satélites</h3>
+              <img src="img/satelite.jpg" alt="Satelite" class="portfolio-img">
             </div>
-            <h3 class="card__title" data-i18n="project_2_title">Controle Térmico de Satélites</h3>
-            <p class="card__text" data-i18n="project_2_text">
-              Simulação do comportamento térmico de um satélite em órbita baixa (LEO) e
-              análise dos dados de temperatura gerados ao longo das órbitas.
-            </p>
-            <ul class="card__tags">
-              <li>Python</li>
-              <li>NumPy</li>
-              <li data-i18n="tag_simulation">Simulação</li>
-              <li data-i18n="tag_data_analysis">Análise de Dados</li>
-            </ul>
-          </a>
+            <div class="portfolio-center">
+              <p class="portfolio-desc" data-i18n="project_2_text">Simulação térmica em órbita baixa (LEO) e análise de dados de temperatura gerados ao longo das órbitas.</p>
+              <div class="portfolio-tags">
+                <span>Python</span><span>NumPy</span><span data-i18n="tag_simulation">Simulação</span>
+              </div>
+            </div>
+            <div class="portfolio-right">
+              <a href="https://github.com/Bering7/Controle-Termico-de-Satelite" target="_blank" class="portfolio-btn">GITHUB</a>
+            </div>
+          </article>
 
-          <!-- =========================================================
-               PROJETO 03: Análise de Crédito e Cancelamento (Churn)
-               ========================================================= -->
-          <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Análise de Crédito e Cancelamento (Churn) no GitHub" data-i18n-aria="project_3_aria">
-            <div class="card__header">
-              <span class="card__index">03</span>
-              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
+          <!-- Projeto SEM imagem -->
+          <article class="portfolio-row">
+            <div class="portfolio-left">
+              <h3 class="portfolio-title" data-i18n="project_3_title">Análise de Crédito e Cancelamento (Churn)</h3>
             </div>
-            <h3 class="card__title" data-i18n="project_3_title">Análise de Crédito e Cancelamento (Churn)</h3>
-            <p class="card__text" data-i18n="project_3_text">
-              Análise exploratória de uma base de clientes de crédito para identificar
-              os padrões e variáveis mais associados ao cancelamento.
-            </p>
-            <ul class="card__tags">
-              <li>Python</li>
-              <li>Pandas</li>
-              <li>EDA</li>
-              <li data-i18n="tag_visualization">Visualização</li>
-            </ul>
-          </a>
+            <div class="portfolio-center">
+              <p class="portfolio-desc" data-i18n="project_3_text">Análise exploratória de uma base de clientes de crédito para identificar padrões de cancelamento.</p>
+              <div class="portfolio-tags">
+                <span>Python</span><span>Pandas</span><span>EDA</span>
+              </div>
+            </div>
+            <div class="portfolio-right">
+              <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" class="portfolio-btn">GITHUB</a>
+            </div>
+          </article>
 
-          <!-- =========================================================
-               PROJETO 04: Assistente Virtual com IA
-               >>> INSIRA O LINK DO REPOSITÓRIO GITHUB NO href ABAIXO <<<
-               ========================================================= -->
-          <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" rel="noopener noreferrer" class="card" aria-label="Ver repositório do projeto Assistente Virtual com IA no GitHub" data-i18n-aria="project_4_aria">
-            <div class="card__header">
-              <span class="card__index">04</span>
-              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
+          <!-- Projeto SEM imagem -->
+          <article class="portfolio-row">
+            <div class="portfolio-left">
+              <h3 class="portfolio-title" data-i18n="project_4_title">Assistente Virtual com IA</h3>
             </div>
-            <h3 class="card__title" data-i18n="project_4_title">Assistente Virtual com IA</h3>
-            <p class="card__text" data-i18n="project_4_text">
-              Chatbot interativo com interface web construída em Streamlit, integrando
-              um modelo de linguagem para responder às perguntas do usuário.
-            </p>
-            <ul class="card__tags">
-              <li>Python</li>
-              <li>Streamlit</li>
-              <li data-i18n="tag_ai">IA</li>
-            </ul>
-          </a>
+            <div class="portfolio-center">
+              <p class="portfolio-desc" data-i18n="project_4_text">Chatbot interativo com interface web construída em Streamlit, integrando um modelo de linguagem.</p>
+              <div class="portfolio-tags">
+                <span>Python</span><span>Streamlit</span><span data-i18n="tag_ai">IA</span>
+              </div>
+            </div>
+            <div class="portfolio-right">
+              <a href="https://github.com/Bering7/Hashtag-Programacao" target="_blank" class="portfolio-btn">GITHUB</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- CONTATO -->
+    <section class="section section--alt" id="contato">
+      <div class="container contact">
+        <div class="contact__intro">
+          <span class="section__label">04</span>
+          <h2 class="contact__title" data-i18n="contact_title">Vamos conversar</h2>
+          <p class="contact__text" data-i18n="contact_text">
+            Estou aberto a oportunidades de contratação ou apenas para trocar uma ideia sobre programação e dados.
+          </p>
+        </div>
 
+        <ul class="contact__list">
+          <li>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=riquemoura.bering@gmail.com" target="_blank" rel="noopener noreferrer" class="contact__item">
+              <span class="contact__label" data-i18n="contact_email">E-mail</span>
+              <span class="contact__value">riquemoura.bering@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5561999035238" target="_blank" rel="noopener noreferrer" class="contact__item">
+              <span class="contact__label" data-i18n="contact_phone_label">Telefone / WhatsApp</span>
+              <span class="contact__value">(61) 99903-5238</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Bering7" target="_blank" rel="noopener noreferrer" class="contact__item">
+              <span class="contact__label" data-i18n="contact_github">GitHub</span>
+              <span class="contact__value">github.com/Bering7</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/henrique-moura-bering-376244359" target="_blank" rel="noopener noreferrer" class="contact__item">
+              <span class="contact__label" data-i18n="contact_linkedin">LinkedIn</span>
+              <span class="contact__value">linkedin.com/in/henrique-moura-bering-376244359</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; <span id="year"></span> Henrique Moura Bering - Brasília, DF</p>
+      <p class="footer__copy">&copy; <span id="year"></span> Henrique Moura Bering - <span data-i18n="footer_location">Brasília, DF</span></p>
       <a href="#inicio" class="footer__top" data-i18n="back_to_top">Voltar ao topo ↑</a>
       <div class="footer__socials">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=riquemoura.bering@gmail.com" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="E-mail" title="E-mail">

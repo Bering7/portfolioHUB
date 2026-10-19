@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Animação de entrada discreta ---------- */
   const revealItems = document.querySelectorAll(
-    ".section__header, .about__grid, .stack__subtitle, .stack-cloud, .card"
+    ".section__header, .about__grid, .stack__subtitle, .stack-cloud, .portfolio-row, .contact__intro, .contact__list"
   );
 
   if ("IntersectionObserver" in window) {
@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_about: "Sobre",
       nav_skills: "Stack",
       nav_projects: "Projetos",
+      nav_contact: "Contato",
       hero_eyebrow: "Disponível para estágio",
       hero_subtitle: "Ciência de Dados & Machine Learning",
       hero_text: "Python, SQL, Power BI e análise de dados aplicados a problemas reais: automação de processos, análise exploratória, aplicações interativas e criação de dashboards.",
@@ -138,31 +139,26 @@ document.addEventListener("DOMContentLoaded", () => {
       fact_location_val: "Brasília — DF",
       skills_title: "Stack",
       stack_subtitle: "Ferramentas que utilizo",
-      skills_group_languages: "Linguagens & Dados",
-      skills_group_platforms: "Plataformas & Visualização",
-      skills_group_tools: "Ferramentas",
       badge_oop: "POO",
       projects_title: "Projetos",
       project_1_title: "Integração e Automação de Processos",
-      project_1_text: "Integração de banco de dados Supabase/PostgreSQL via API REST e disparo automatizado de mensagens pela Z-API, reduzindo etapas manuais no fluxo de comunicação.",
-      project_1_aria: "Ver repositório do projeto Integração e Automação de Processos no GitHub",
+      project_1_text: "Integração de banco de dados Supabase/PostgreSQL via API REST e disparo automatizado de mensagens pela Z-API.",
       project_2_title: "Controle Térmico de Satélites",
-      project_2_text: "Simulação do comportamento térmico de um satélite em órbita baixa (LEO) e análise dos dados de temperatura gerados ao longo das órbitas.",
-      project_2_aria: "Ver repositório do projeto Controle Térmico de Satélites no GitHub",
-      tag_simulation: "Simulação",
-      tag_data_analysis: "Análise de Dados",
+      project_2_text: "Simulação térmica em órbita baixa (LEO) e análise de dados de temperatura gerados ao longo das órbitas.",
       project_3_title: "Análise de Crédito e Cancelamento (Churn)",
-      project_3_text: "Análise exploratória de uma base de clientes de crédito para identificar os padrões e variáveis mais associados ao cancelamento.",
-      project_3_aria: "Ver repositório do projeto Análise de Crédito e Cancelamento (Churn) no GitHub",
-      tag_visualization: "Visualização",
+      project_3_text: "Análise exploratória de uma base de clientes de crédito para identificar padrões de cancelamento.",
       project_4_title: "Assistente Virtual com IA",
-      project_4_text: "Chatbot interativo com interface web construída em Streamlit, integrando um modelo de linguagem para responder às perguntas do usuário.",
-      project_4_aria: "Ver repositório do projeto Assistente Virtual com IA no GitHub",
-      tag_ai: "IA",
+      project_4_text: "Chatbot interativo com interface web construída em Streamlit, integrando um modelo de linguagem.",
+      project_5_title: "Monitor Financeiro",
+      project_5_text: "Aplicação web com Supabase (Auth + PostgreSQL), Chart.js e CRUD de transações.",
+      contact_title: "Vamos conversar",
+      contact_text: "Estou aberto a oportunidades de contratação ou apenas para trocar uma ideia sobre programação e dados.",
+      contact_phone_label: "Telefone / WhatsApp",
       back_to_top: "Voltar ao topo ↑",
       theme_toggle_label: "Alternar modo escuro e claro",
       nav_toggle_open: "Abrir menu",
-      nav_toggle_close: "Fechar menu"
+      nav_toggle_close: "Fechar menu",
+      footer_location: "Brasília, DF"
     },
     en: {
       page_title: "Henrique Moura Bering | Portfolio",
@@ -170,6 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_about: "About",
       nav_skills: "Stack",
       nav_projects: "Projects",
+      nav_contact: "Contact",
       hero_eyebrow: "Available for internship",
       hero_subtitle: "Data Science & Machine Learning",
       hero_text: "Python, SQL, Power BI, and data analysis applied to real-world challenges: process automation, exploratory analysis, interactive applications, and dashboard design.",
@@ -188,34 +185,29 @@ document.addEventListener("DOMContentLoaded", () => {
       fact_model_label: "Work Model",
       fact_model_val: "On-site, hybrid, or remote",
       fact_location_label: "Location",
-      fact_location_val: "Brasília — DF, Brazil",
+      fact_location_val: "Brasília, Brazil",
       skills_title: "Stack",
       stack_subtitle: "Tools I work with",
-      skills_group_languages: "Languages & Data",
-      skills_group_platforms: "Platforms & Visualization",
-      skills_group_tools: "Tools",
       badge_oop: "OOP",
       projects_title: "Projects",
       project_1_title: "Process Integration and Automation",
-      project_1_text: "Integration of Supabase/PostgreSQL database via REST API and automated messaging via Z-API, reducing manual steps in the communication workflow.",
-      project_1_aria: "View Integration and Process Automation repository on GitHub",
+      project_1_text: "Integration of Supabase/PostgreSQL database via REST API and automated messaging via Z-API.",
       project_2_title: "Satellite Thermal Control",
-      project_2_text: "Thermal behavior simulation of a satellite in low Earth orbit (LEO) and temperature data analysis generated across orbits.",
-      project_2_aria: "View Satellite Thermal Control repository on GitHub",
-      tag_simulation: "Simulation",
-      tag_data_analysis: "Data Analysis",
-      project_3_title: "Credit Analysis and Churn Prediction",
-      project_3_text: "Exploratory data analysis (EDA) of a credit customer base to identify key patterns and drivers associated with churn.",
-      project_3_aria: "View Credit Analysis and Churn Prediction repository on GitHub",
-      tag_visualization: "Visualization",
+      project_2_text: "Thermal simulation in low Earth orbit (LEO) and analysis of temperature data generated across orbits.",
+      project_3_title: "Credit Analysis and Churn",
+      project_3_text: "Exploratory analysis of a credit customer base to identify cancellation patterns.",
       project_4_title: "AI Virtual Assistant",
-      project_4_text: "Interactive chatbot with web UI built with Streamlit, integrating a large language model to answer user queries.",
-      project_4_aria: "View AI Virtual Assistant repository on GitHub",
-      tag_ai: "AI",
+      project_4_text: "Interactive chatbot with a web interface built in Streamlit, integrating a language model.",
+      project_5_title: "Financial Monitor",
+      project_5_text: "Web application with Supabase (Auth + PostgreSQL), Chart.js, and transaction CRUD.",
+      contact_title: "Let's talk",
+      contact_text: "I'm open to hiring opportunities or simply chatting about programming and data.",
+      contact_phone_label: "Phone / WhatsApp",
       back_to_top: "Back to top ↑",
       theme_toggle_label: "Toggle dark and light mode",
       nav_toggle_open: "Open menu",
-      nav_toggle_close: "Close menu"
+      nav_toggle_close: "Close menu",
+      footer_location: "Brasília, Brazil"
     }
   };
 
@@ -231,11 +223,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (dict[key]) el.textContent = dict[key];
-    });
-
-    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
-      const key = el.getAttribute("data-i18n-aria");
-      if (dict[key]) el.setAttribute("aria-label", dict[key]);
     });
 
     const langToggleBtn = document.getElementById("langToggle");
