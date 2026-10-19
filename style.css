@@ -583,7 +583,7 @@ h3 {
 .portfolio-tags span { border: 1px solid var(--border); padding: 0.3rem 0.6rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; }
 
 .portfolio-right { display: flex; flex-direction: column; gap: 0.8rem; width: 100%; }
-.portfolio-btn { display: flex; align-items: center; justify-content: center; width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text); text-transform: uppercase; transition: background 0.2s; }
+.portfolio-btn { display: flex; align-items: center; justify-content: center; width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text); text-transform: uppercase; transition: background 0.2s; white-space: nowrap; }
 .portfolio-btn:hover { background: var(--bg-alt); }
 .portfolio-btn--primary { background: var(--link-blue); border-color: var(--link-blue); color: #fff; }
 .portfolio-btn--primary:hover { background: var(--link-blue-hover); border-color: var(--link-blue-hover); color: #fff; }
